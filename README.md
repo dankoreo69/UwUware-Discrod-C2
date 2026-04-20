@@ -1,7 +1,8 @@
 # UwUware-Discrod-C2
 UwUware uses discrod as a C2 server
 
-<img width="772" height="379" alt="Screenshot 2026-04-19 230723" src="https://github.com/user-attachments/assets/fac35a32-9450-4676-b614-f2c1e61f9c6b" />
+<img width="772" height="379" alt="Screenshot 2026-04-19 230723" src="https://github.com/user-attachments/assets/26b2b347-9d27-40ef-a85a-ec1d359c3798" />
+
 
 # CONFIG THESE IN UwUware.py 
 
@@ -41,9 +42,7 @@ Command = pyinstaller --noconsole --onefile --icon=UwUware.ico UwUware.py
 !kill (terminates the infected)
 
 
-
-
-   <img width="48" height="48" alt="UwUware" src="https://github.com/user-attachments/assets/fe4bf746-a0eb-40c8-b176-f6435a493dd6" />
+<img width="48" height="48" alt="UwUware" src="https://github.com/user-attachments/assets/fedcc004-7155-451e-9a0a-6650b50abb4b" />
 
 UwUware.exe
 
