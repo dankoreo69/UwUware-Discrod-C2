@@ -1,8 +1,23 @@
 # UwUware
 #by @dankoreo69
 
-import subprocess, sys, os, json, ctypes, platform, io, urllib
+import subprocess, sys, os, json, ctypes, platform, io, urllib, certifi, ssl, aiohttp
 from datetime import datetime
+
+
+# Use certifi bundle
+os.environ['SSL_CERT_FILE'] = certifi.where()
+os.environ['REQUESTS_CA_BUNDLE'] = certifi.where()
+
+# OR Create a permissive SSL context
+ssl_context = ssl.create_default_context(cafile=certifi.where())
+# ssl_context.verify_mode = ssl.CERT_NONE
+import aiohttp.connector
+original_init = aiohttp.connector.TCPConnector.__init__
+def patched_init(self, *args, **kwargs):
+    kwargs['ssl'] = ssl_context
+    original_init(self, *args, **kwargs)
+aiohttp.connector.TCPConnector.__init__ = patched_init
 
 # config
 bot_token = "" #yor bot token
